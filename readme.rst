@@ -9,7 +9,7 @@ Dockerizing Redis
 :Description: Dockerfile to build a Redis container image which can be 
               linked to other containers.
 
-:Release notes: https://raw.githubusercontent.com/antirez/redis/3.0/00-RELEASENOTES
+:Release notes: https://raw.githubusercontent.com/antirez/redis/3.2/00-RELEASENOTES
 :Official image: https://hub.docker.com/_/redis/
 
 
