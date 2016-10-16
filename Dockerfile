@@ -18,9 +18,9 @@ RUN curl -o /usr/local/bin/gosu -SL "https://github.com/tianon/gosu/releases/dow
     chmod +x /usr/local/bin/gosu
 
 
-ENV REDIS_VERSION 3.2.1
+ENV REDIS_VERSION 3.2.2
 ENV REDIS_DOWNLOAD_URL http://download.redis.io/releases/redis-$REDIS_VERSION.tar.gz
-ENV REDIS_DOWNLOAD_SHA1 26c0fc282369121b4e278523fce122910b65fbbf
+ENV REDIS_DOWNLOAD_SHA1 3141be9757532139f445bd5f6f4fae293bc33d27
 
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN groupadd -r redis && \
