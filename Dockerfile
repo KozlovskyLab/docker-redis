@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV BUILD_DEPENDENCIES curl ca-certificates gcc libc6-dev make
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends $BUILD_DEPENDENCIES && \
+    apt-get install -y --no-install-recommends $BUILD_DEPENDENCIES gnupg2 dirmngr && \
     rm -rf /var/lib/apt/lists/*
 
 
@@ -18,9 +18,9 @@ RUN curl -o /usr/local/bin/gosu -SL "https://github.com/tianon/gosu/releases/dow
     chmod +x /usr/local/bin/gosu
 
 
-ENV REDIS_VERSION 3.2.0
+ENV REDIS_VERSION 3.2.1
 ENV REDIS_DOWNLOAD_URL http://download.redis.io/releases/redis-$REDIS_VERSION.tar.gz
-ENV REDIS_DOWNLOAD_SHA1 0c1820931094369c8cc19fc1be62f598bc5961ca
+ENV REDIS_DOWNLOAD_SHA1 26c0fc282369121b4e278523fce122910b65fbbf
 
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN groupadd -r redis && \
